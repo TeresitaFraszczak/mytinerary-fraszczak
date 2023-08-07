@@ -1,7 +1,8 @@
 #root {
-  max-width: 1280px;
+  
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
+  background-color: rgba(37, 199, 172, 0.801);
   
 }
 

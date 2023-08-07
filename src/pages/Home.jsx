@@ -21,12 +21,12 @@ export default function Home() {
         {id: 'oceania4' , city: "Wellington", photo: "/img/oceania/wellington.jpg"}
     ]
   return (
-    <main className='flex mx-12 mt-[200px]'>
+    <main className='flex mx-12 mt-[200px] mb-[200px]'>
     <div className='mr-12 w-6/12 h-[250px]'>
    
     <h2 className="font-bold text-3xl">Find the perfect destination</h2>
     <p className="py-8 text-justify text-[#1C1C1C99]">Our app will help you find perfect path for your next trip. With an easy-to-use interface and a host of itinerary options, planning your next trip has neves been easier.</p>
-    <button className='px-10 py-0 flex rounded bg-[#4F46E5] hover:bg-sky-700'>   
+    <button className='px-10 py-0 flex rounded bg-[#4F46E5] hover:bg-orange-600'>   
   <a href="./" className="text-white font-medium px-3 py-2">View More</a>
   </button>
   </div>  
