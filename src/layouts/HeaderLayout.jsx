@@ -5,7 +5,7 @@ export default function HeaderLayout({children}) {
   return (
     <>
     <img href="" alt="" />
-    <header className='flex justify-between mx-12 mt-[50px] max-h-[50px]'>
+    <header className='flex justify-between mx-[100px] mt-[50px] max-h-[50px]'>
       <div className='flex'>
         <logo className="w-[150px] hover:animate-pulse">
         <img src="img/logo33.png" alt="" />

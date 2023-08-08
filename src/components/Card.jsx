@@ -1,8 +1,9 @@
 export default function Card({src, alt, city}) {
   return (
-    <div className="relative h-[124px] w-full max-w-[300px] text-center shadow-lg hover:bg-gradient-to-r">
-    <img className="rounded h-full w-full bg-cover bg-center" src={src} alt={alt} />
-    <p className="absolute px-6 py-1 font-bold text-xl mb-2">{city}</p>
- </div> 
+  
+    <div className="h-[250px] w-[140px] bg-cover bg-center shadow-lg hover:-translate-y-12" style={{backgroundImage:`url(${src})`}}>
+    <p className="px-3 py-1 text-sm font-bold text-white mb-2">{city}</p>
+    </div> 
+   
   )
 }
