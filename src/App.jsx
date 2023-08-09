@@ -1,17 +1,18 @@
 
 import './App.css'
-import HeaderLayout from './layouts/HeaderLayout'
-import Home from './pages/Home'
-
+import { RouterProvider } from 'react-router-dom';
+import router from "./router";
 
 function App() {
    
   return( 
-    <HeaderLayout>
-      <Home />
-    </HeaderLayout>     
-    
+    <>    
+    <div className="bg-cover bg-center" style={{backgroundImage:`url(/img/backgroundSign.jpg)`}}>
+    <RouterProvider router={router} />
+
+    </div>
+    </>
   )
   }
 
-export default App
+export default App;
