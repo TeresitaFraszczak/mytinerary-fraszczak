@@ -1,11 +1,13 @@
 import { useState,useEffect } from "react";
 import Carrousel from "../components/Carrousel";
 import Buttoncarrous from "../components/Buttoncarrous";
+import axios from "axios";
 
 export default function Home() {
   let [show,setShow] = useState(true)
+  let [data,setData] = useState([])
   
-    let data = [
+    /*let data = [
         {id: 'america1', city: "Cancun", photo: "/img/america/cancun.jpg"},
         {id: 'america2', city: "New York", photo: "/img/america/newyork.jpg"},
         {id: 'america3', city: "Rio de Janeiro", photo: "/img/america/rioDeJaneiro.jpg"},
@@ -22,7 +24,15 @@ export default function Home() {
         {id: 'oceania2' , city: "Sidney", photo: "/img/oceania/sidney.jpg"},
         {id: 'oceania3' , city: "Suva", photo: "/img/oceania/suva.jpg"},
         {id: 'oceania4' , city: "Wellington", photo: "/img/oceania/wellington.jpg"}
-    ]
+    ]*/
+    useEffect(
+      ()=>{
+        axios('/data.json')
+          .then(res=>setData(res.data))
+          .catch(err=>console.log(err))
+      }, 
+    []   
+    )
 
   return (
         
