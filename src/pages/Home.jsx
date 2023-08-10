@@ -1,6 +1,5 @@
 import { useState,useEffect } from "react";
 import Carrousel from "../components/Carrousel";
-import Buttoncarrous from "../components/Buttoncarrous";
 import axios from "axios";
 import { Link as Anchor } from "react-router-dom";
 
@@ -39,11 +38,17 @@ export default function Home() {
     <>
     
     <div className="flex justify-center h-[100px] items-center">
-      <p className="italic mt-10 text-center text-xl animate-[pulse_6s_ease-in-out_infinite]">"Find your perfect trip, designed by insiders who know and love their cities"</p>
+      <p className="italic mt-200px text-center text-lg animate-[pulse_6s_ease-in-out_infinite]
+      md:italic md:mt-100px md:text-center md:text-xl md:animate-[pulse_6s_ease-in-out_infinite]
+      lg:italic lg:mt-10 lg:text-center lg:text-xl lg:animate-[pulse_6s_ease-in-out_infinite]
+      ">"Find your perfect trip, designed by insiders who know and love their cities"</p>
     </div>
         
-    <main className='flex mx-[100px] mt-[60px] mb-[200px]'>
-    <div className='rounded-lg flex ps-10 py-10'style={{backgroundColor: 'rgba(190, 101, 18, 0.74)'}} >   
+    <main className=
+    'grow flex mx-[80px] mt-[60px] mb-[200px] flex-wrap'>
+    <div className='rounded-lg flex ps-10 py-10
+    md:rounded-lg md:flex md:ps-10 md:py-10'
+    style={{backgroundColor: 'rgba(190, 101, 18, 0.74)'}} >   
     <div className='mr-12 w-4/12 h-[250px] text-white'>   
        <h2 className="font-bold text-3xl">Find the perfect destination</h2>
        <p className="py-10 text-justify">Our app will help you find perfect path for your next trip. With an easy-to-use interface and a host of itinerary options, planning your next trip has neves been easier.</p>
@@ -52,9 +57,8 @@ export default function Home() {
        </button>
     </div>  
    
-    {show ? (<Buttoncarrous onClick={()=>setShow(!show)} value={"hiden"}/>) : (<Buttoncarrous onClick={()=>setShow(!show)} value={"view"}/>) }
     
-    {show ? <Carrousel data={data} /> : (null)}
+    <Carrousel data={data} /> 
    
     </div>  
    </main>
