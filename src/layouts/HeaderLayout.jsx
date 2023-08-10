@@ -9,7 +9,8 @@ export default function HeaderLayout() {
   let [show,setShow]=useState(false)
   return (
     <>    
-    <header className='flex justify-between mx-[100px] pt-[50px] max-h-[50px]'>
+    <header className='flex justify-center pt-[50px] max-h-[50px] w-auto flex-wrap
+    md:flex md:justify-between md:mx-[100px] md:pt-[50px]'>
     <div className='flex'>
     <Hamburg onClick={()=>setShow(!show)}/>
     {show && <Display />}

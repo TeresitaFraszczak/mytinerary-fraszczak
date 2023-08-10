@@ -6,7 +6,9 @@ export default function NavBar() {
  
   
   return (
-    <nav className='flex sm:justify-end space-x-4 md:flex-row'>
+    <nav className='hidden
+    sm:flex sm:justify-end sm:space-x-4 
+    md:flex-row'>
 
     <Anchor href="./home" className="text-white font-bold font-medium px-3 py-2 text-center">Home</Anchor>
     <Anchor to="./cities" className="text-white font-bold font-medium px-3 py-2 text-center">Cities</Anchor>

@@ -29,12 +29,19 @@ export default function Carrousel({ data }) {
     console.log(counterTo);
   }
   return (
-    <div className="w-8/12 flex flex-col items-center justify-center">
-      <h3 className="text-white text-2xl font-bold mb-5">Popular Mytineraries!</h3>
+    <div className="w-12/12 flex flex-wrap items-center justify-center mt-[100px]
+    sm:w-12/12 sm:mt-[300px]
+    md:w-12/12 md:mt-[100px]
+    lg:w-8/12 lg:flex" >
+      <h3 className="text-white text-2xl font-bold mb-5">Popular Mytineraries</h3>
     
-    <div className='flex grow items-center'> 
+    <div className='flex items-center 
+    md:flex grow items-center
+    lg:flex grow items-center'> 
      <Arrow direction={"M13.28 3.97a.75.75 0 010 1.06L6.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5a.75.75 0 010-1.06l7.5-7.5a.75.75 0 011.06 0zm6 0a.75.75 0 010 1.06L12.31 12l6.97 6.97a.75.75 0 11-1.06 1.06l-7.5-7.5a.75.75 0 010-1.06l7.5-7.5a.75.75 0 011.06 0z" } onClick={prev_slide}/> 
-       <div className="grid gap-2 grid-cols-4">
+       <div className="grid gap-2 grid-cols-2
+       sm:grid-cols-2 grid-cols-2      
+       lg:grid-cols-4">
        {data.slice(counter, counterTo).map((each, index)=> <Card key={each.id} src={each.photo} alt={each.id} city={each.city}/>)}
        </div> 
       

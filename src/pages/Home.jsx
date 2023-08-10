@@ -38,18 +38,26 @@ export default function Home() {
     <>
     
     <div className="flex justify-center h-[100px] items-center">
-      <p className="italic mt-200px text-center text-lg animate-[pulse_6s_ease-in-out_infinite]
-      md:italic md:mt-100px md:text-center md:text-xl md:animate-[pulse_6s_ease-in-out_infinite]
-      lg:italic lg:mt-10 lg:text-center lg:text-xl lg:animate-[pulse_6s_ease-in-out_infinite]
+      <p className="italic mt-[150px] text-center text-lg animate-[pulse_6s_ease-in-out_infinite]
+      sm:mt-[100px] mx-3
+      md:mt-100px md:text-xl 
+      lg:mt-10 lg:text-xl 
       ">"Find your perfect trip, designed by insiders who know and love their cities"</p>
     </div>
         
-    <main className=
-    'grow flex mx-[80px] mt-[60px] mb-[200px] flex-wrap'>
-    <div className='rounded-lg flex ps-10 py-10
-    md:rounded-lg md:flex md:ps-10 md:py-10'
+    <main className='grow flex mx-2 mt-[100px] mb-[200px] flex-col
+    sm:mx-[80px] sm:mt-[60px] sm:mb-[50px] sm:flex-wrap
+    md:mx-[80px] md:mt-[50px] md:mb-[50px] md:flex-wrap
+    lg:mx-[80px] lg:mt-[40px] lg:mb-[50px]'>
+    <div className='rounded-lg flex ps-2 py-10 mt-8 flex-wrap 
+    sm:ps-10 sm:py-10 sm:mb-1
+    md:ps-10 md:py-10 md:mb-1
+    lg:ps-10 lg:py-10 lg:mb-1 lg:flex-row'
     style={{backgroundColor: 'rgba(190, 101, 18, 0.74)'}} >   
-    <div className='mr-12 w-4/12 h-[250px] text-white'>   
+    <div className='mr-12 w-12/12 h-[300px] text-white
+    sm:h-[250px]
+    md:w-12/12 md:h-[200px]
+    lg:w-4/12 lg:h-[250px]'>   
        <h2 className="font-bold text-3xl">Find the perfect destination</h2>
        <p className="py-10 text-justify">Our app will help you find perfect path for your next trip. With an easy-to-use interface and a host of itinerary options, planning your next trip has neves been easier.</p>
        <button className='px-10 py-0 flex rounded bg-[#4F46E5] hover:bg-orange-600'>   
