@@ -54,7 +54,7 @@ export default function Home() {
        <p className="py-10 text-justify">Our app will help you find perfect path for your next trip. With an easy-to-use interface and a host of itinerary options, planning your next trip has neves been easier.</p>
        
        <button className='px-10 py-0 flex rounded bg-[#4F46E5] hover:bg-orange-600'>   
-       <Anchor to="./cities" href="./" className="text-white font-medium px-3 py-2">View More</Anchor>
+       <Anchor to="./cities" href="./" className="text-white font-medium px-3 py-2 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out">View More</Anchor>
        </button>
     </div>  
        
