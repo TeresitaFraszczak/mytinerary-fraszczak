@@ -1,7 +1,8 @@
-import { useState,useEffect,useRef } from 'react'
+import { useState,useEffect,useRef } from 'react';
 import axios from 'axios';
 import apiUrl from "../apiUrl";
-import CardGalery from "../components/CardGalery"
+import CardGalery from "../components/CardGalery";
+import CardErr from '../components/CardErr';
 
 
 export default function Cities() {
@@ -43,11 +44,13 @@ export default function Cities() {
         md:grid-cols-2
         lg:grid-cols-3
         2xl:grid-cols-4'>        
-        {cities.map(each=><CardGalery key={each._id} src={each.photo} alt={each._id} text={each.city} id={each._id} />) }
+        {cities.length != 0 ?
+        cities.map(each=><CardGalery key={each._id} src={each.photo} alt={each._id} text={each.city} id={each._id} />) :<CardErr/>}
         </div> 
+        
       </> 
   
     )
   }
-
+  
     

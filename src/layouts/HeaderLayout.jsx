@@ -12,17 +12,17 @@ export default function HeaderLayout() {
     <header className='flex justify-between px-3 pt-[50px] w-auto flex-wrap
     md:flex md:justify-between md:pt-[50px] md:mx-6'>
     <div className='flex justify-between'>
-    <Hamburg onClick={()=>setShow(!show)}/>
+    < Hamburg onClick={()=>setShow(!show)}/>
     {show && <Display />}
      
-        <logo className="w-[60px] m-3 -translate-y-6 hover:animate-pulse">
-        <img src="img/iconavion.png" alt="logo" />
-        </logo>
+        <div className="w-[60px] m-3 -translate-y-6 hover:animate-pulse">
+        <img src="./img/iconavion.png" alt="logo" />
+        </div>
         <h1 className='text-white font-bold text-xl justify-start'>My Tinerary</h1>
       </div>
        <NavBar />
     </header>
-      <Outlet />
+    <Outlet />
     <Footer />
     </>
   )
