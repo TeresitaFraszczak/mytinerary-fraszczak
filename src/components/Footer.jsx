@@ -28,7 +28,7 @@ export default function Footer() {
       <a href="#!" class="mr-6 text-neutral-300 ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          class="h-5 w-5"
+          class="h-6 w-6"
           fill="currentColor"
           viewBox="0 0 24 24">
           <path
@@ -72,17 +72,17 @@ export default function Footer() {
     <div class="flex mr-12">
         
         <p class="mb-2 mr-6">
-          <a href="#!" class="text-neutral-300 "
+          <a href="./home" class="text-neutral-300 "
             >Home</a
           >
         </p>
         <p class="mb-2 mr-6">
-          <a href="#!" class="text-neutral-300 "
+          <a href="/cities" class="text-neutral-300 "
             >Cities</a
           >
         </p>
         <p class="mb-2 mr-6">
-          <a href="#!" class="text-neutral-300 "
+          <a href="/login" class="text-neutral-300 "
             >Login</a
           >
         </p>
