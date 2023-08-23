@@ -7,7 +7,7 @@ import apiUrl from "../apiUrl";
 export default function CityDetails() {
   const { city_id } = useParams()
   const [city, setCity] = useState([])
-
+  console.log(city_id)
   useEffect(
     () => {
       axios(apiUrl + 'cities/' + city_id)
@@ -21,18 +21,13 @@ export default function CityDetails() {
     <>
     
       <div className="mt-18 flex justify-center items-center text-white text-xl">
-        <h1>City Detail {city.text}</h1>
+        <h1>{city.text}</h1>
       </div>
       <div className=" p-5">
         <img className="rounded-md" src={city.photo} alt={city.country} />
       </div>
-      <div>
-        <p className="font-bold mt-7 ml-4 text-white" >{city.featuredLocation} </p>
-        <p className="font-semibold mt-8 ml-5 text-white">{city.description}</p>
-        <p className="font-semibold mt-8 ml-5 text-white">{city.smalldescription}</p>
-      </div>
-      
-      <div className="pt-[50px] ml-5 text-white">
+            
+      <div className="pt-[50px] ml-5 text-white font-bold justify-center">
         <p>Page under construction</p>
       </div>
       <div>
