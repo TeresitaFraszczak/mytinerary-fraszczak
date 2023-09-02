@@ -65,7 +65,7 @@ export default function Form() {
       
     <div className="my-8 h-0.5 border-t-0 bg-neutral-200 opacity-100" /></div>
 
-    <input ref={mail}  type="text"  className="block min-h-[auto] w-full p-3" name="mail" id="mail"  defaultValue="" placeholder="Mail"  />
+    <input ref={mail}  type="text"  className="block min-h-[auto] w-full caret-orange-500 p-3" name="mail" id="mail"  defaultValue="" placeholder="Mail"  />
     <input ref={password} type="password" className="block min-h-[auto] w-full p-3" name="password" id="password" defaultValue="" placeholder="Password"/>
        <button className='m-2 px-10 py-0 flex w-2/4 rounded bg-[#4F46E5] hover:bg-orange-600 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out'> 
         
