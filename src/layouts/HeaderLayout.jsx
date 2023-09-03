@@ -8,15 +8,16 @@ import Display from "../components/Display";
 export default function HeaderLayout() {
   let [show,setShow]=useState(false)
   return (
-    <>    
+    <>   
+        
     <header className='flex justify-between px-3 pt-[50px] w-auto flex-wrap
     md:flex md:justify-between md:pt-[50px] md:mx-6'>
     <div className='flex justify-between'>
-    < Hamburg onClick={()=>setShow(!show)}/>
+    <Hamburg onClick={()=>setShow(!show)}/>
     {show && <Display />}
      
         <div className="w-[60px] m-3 -translate-y-6 hover:animate-pulse">
-        <img src="./img/iconavion.png" alt="logo" />
+        <img src="../../public/img/iconavion.png" alt="logo" />
         </div>
         <h1 className='text-white font-bold text-xl justify-start'>My Tinerary</h1>
       </div>
@@ -24,6 +25,7 @@ export default function HeaderLayout() {
     </header>
     <Outlet />
     <Footer />
+    
     </>
   )
 }

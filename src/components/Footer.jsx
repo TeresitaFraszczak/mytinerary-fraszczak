@@ -1,10 +1,13 @@
+import { Link as Anchor } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="flex w-full h-[100px] text-white font-bold justify-between items-center" 
+    <footer className="flex-col flex w-full h-[150px] text-white font-bold justify-center items-center py-3
+    sm:flex sm:flex-row sm:h-[100px] sm:justify-between"  
     style={{backgroundColor: 'rgba(85, 84, 83, 0.801)'}}>
 
-      <div className="ml-12 flex justify-center">
+      <div className=" flex justify-center p-3
+      sm:ml-12">
       <a href="#!" className="mr-6 text-neutral-300">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +72,8 @@ export default function Footer() {
       </a>
     </div>
 
-    <div className="flex mr-12">
+    <div className="flex
+    sm:mr-12">
         
         <p className="mb-2 mr-6">
           <a href="./home" className="text-neutral-300 "
@@ -82,9 +86,8 @@ export default function Footer() {
           >
         </p>
         <p className="mb-2 mr-6">
-          <a href="/login" className="text-neutral-300 "
-            >Login</a
-          >
+          <Anchor to="./auth/signup" className="text-neutral-300 "
+            >Login</Anchor>
         </p>
         
       </div>

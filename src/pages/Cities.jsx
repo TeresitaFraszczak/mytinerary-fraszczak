@@ -1,27 +1,25 @@
 import { useState,useEffect,useRef } from 'react';
-import axios from 'axios';
-import apiUrl from "../apiUrl";
+
 import CardGalery from "../components/CardGalery";
 import CardErr from '../components/CardErr';
+import { useSelector, useDispatch } from 'react-redux';
+import city_actions from '../store/actions/cities';
 
+const { read_cities } = city_actions;
 
 export default function Cities() {
-  const [cities,setCities] = useState([])
-  const [reEffect,setReEffect] = useState(true)
-  const text = useRef()
+  const cities = useSelector(store => store.cities.cities);
+  const [reEffect,setReEffect] = useState(true);
+  const text = useRef();
+  const dispatch = useDispatch();
 
-    useEffect(
-      ()=>{
-        axios(apiUrl+'cities?city='+ text.current.value)
-          //.then(res=>console.log(res.data.response))
-          .then(res=>setCities(res.data.response))
-          .catch(err=>console.log(err))
-      },[reEffect]
-    )
+    useEffect(()=>{
+        dispatch(read_cities({ text: text.current?.value }));
+      },[reEffect]);
   
     function handlerFilter(){
         console.log(text.current.value)
-        setReEffect(!reEffect)
+        setReEffect(!reEffect);
     }
     return (
       <>
@@ -43,7 +41,7 @@ export default function Cities() {
         <div className='grid gap-2 grid-cols-1 flex justify-items-center
         md:grid-cols-2
         lg:grid-cols-3
-        2xl:grid-cols-4'>        
+        xl:grid-cols-4'>        
         {cities.length != 0 ?
         cities.map(each=><CardGalery key={each._id} src={each.photo} alt={each._id} text={each.city} id={each._id} />) :<CardErr/>}
         </div> 
