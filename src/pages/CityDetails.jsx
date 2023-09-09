@@ -34,7 +34,7 @@ export default function CityDetails() {
     <>
     <div className="p-12" style={{backgroundColor: 'rgba(19, 18, 17, 0.88)'}}>
       
-      <div className="p-12 rounded bg-cover bg-center" style={{ backgroundImage: `url(${city.photo})` }}>
+      <div className="p-12 rounded bg-cover bg-center" style= {{ backgroundImage: `url(${city.photo})` }}>
          <div className="mt-18 flex flex-col justify-center items-center text-white">
             <h1 id="shadows" className="font-bold text-2xl">{city.city}</h1>        
          </div>
@@ -59,6 +59,7 @@ export default function CityDetails() {
                             duration={each.duration}
                             tags={each.tags}
                             photo={each.photo}
+                            id={each._id}
                         />
                     ))
                 ) : (

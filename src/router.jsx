@@ -10,9 +10,6 @@ import FormSignUp from "./pages/FormSignUp"
 import FormSignIn from "./pages/FormSignIn"
 
 
-
-
-
 const router = createBrowserRouter([
   {
     path: "/",

@@ -5,7 +5,7 @@ import Activity from "./Activity"
 import Money from "./Money";
 // eslint-disable-next-line react/prop-types
 
-export default function DetailCity({ name, price, duration, tags, photo, admin_id, admin_photo }) {
+export default function DetailCity({ name, price, duration, tags, photo, admin_id, admin_photo, id }) {
 
   const [show,setShow] = useState(false);
   const money = Math.floor(price/40);
@@ -21,7 +21,7 @@ export default function DetailCity({ name, price, duration, tags, photo, admin_i
            
             <div className="flex w-[650px] h-[120px] mt-6 px-4 items-center justify-between">
                 <div className="flex flex-col items-center justify-start p-2 w-[100px] h-[120px]">
-                    <img className="flex p-2" src={admin_photo} alt="User" />
+                    <img className="flex p-2 rounded-full" src={admin_photo} alt="User" />
                     <p className=" flex text-center text-sm">{admin_id}</p>
                 </div>
                 <div className="flex flex-col items-center justify-start p-2 w-[200px] h-[120px] ">
@@ -48,7 +48,7 @@ export default function DetailCity({ name, price, duration, tags, photo, admin_i
                 </div>
             </div>
         </div>
-        {show ? <Activity /> : <h1></h1>}
+        {show ? <Activity itinerary_id={id} /> : <h1></h1>}
         
     </div>
 
