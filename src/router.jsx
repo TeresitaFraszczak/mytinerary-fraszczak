@@ -8,9 +8,7 @@ import CityDetails from "./pages/CityDetails"
 import NotFound from "./pages/NotFound"
 import FormSignUp from "./pages/FormSignUp"
 import FormSignIn from "./pages/FormSignIn"
-
-
-
+import Activity from "./components/Activity"
 
 
 const router = createBrowserRouter([
@@ -27,6 +25,7 @@ const router = createBrowserRouter([
         { path: "/city/:city_id", element: <CityDetails />},
         { path: "/auth/signup", element: <FormSignUp /> },
         { path: "/auth/signin", element: <FormSignIn /> },
+        { path: "/activity/:itinerary_id", element: <Activity /> },
         { path: "/*", element: <NotFound />},
     ],
   },
