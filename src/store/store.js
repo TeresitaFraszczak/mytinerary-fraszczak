@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import  city_reducer from "./reducers/cities";
+import city_reducer from "./reducers/cities";
 import itinerary_reducer from "./reducers/itineraries";
 import user_reducer from "./reducers/users";
 import activity_reducer from "./reducers/activities";

@@ -22,5 +22,4 @@ const activity_reducer = createReducer(
 
 )
 
-
 export default activity_reducer

@@ -14,9 +14,12 @@ const { read_itineraries_from_city } = itinerary_actions
 export default function CityDetails() {
   const [show, setShow] = useState(false)
   const { city_id } = useParams()
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
  
   //console.log(city_id)
+  const city = useSelector(store => store.cities.city)
+  const itineraries = useSelector(store => store.itineraries.itineraries_from_city)
+  console.log(itineraries)
 
   useEffect(
     () => {
@@ -26,25 +29,21 @@ export default function CityDetails() {
     }, []
   );
 
-  const city = useSelector(store => store.cities.city)
-    const itineraries = useSelector(store => store.itineraries.itineraries_from_city)
-    console.log(itineraries)
-
+  
   return (
     <>
-    <div className="p-12" style={{backgroundColor: 'rgba(19, 18, 17, 0.88)'}}>
+    <div className="p-12 my-3" style={{backgroundColor: 'rgba(19, 18, 17, 0.88)'}}>
       
-      <div className="p-12 rounded bg-cover bg-center" style= {{ backgroundImage: `url(${city.photo})` }}>
+      < div className="p-12 rounded bg-cover bg-center" style= {{ backgroundImage: `url(${city.photo})` }}>
          <div className="mt-18 flex flex-col justify-center items-center text-white">
             <h1 id="shadows" className="font-bold text-2xl">{city.city}</h1>        
          </div>
-      <div className="flex flex-col justify-center items-center" >
+        <div className="flex flex-col justify-center items-center" >
            <p id="shadows" className="w-[80vh] text-lg font-medium text-white flex m-12 text-justify text-center text-shadow-2xl" >{city.smalldescription}</p>
-      </div> 
-      <div className="flex pt-[60px] items-end justify-center">
+         </div> 
+         <div className="flex pt-[60px] items-end justify-center">
             <div onClick={() => setShow(!show)} className="rounded-md bg-[#4F46E5] hover:bg-orange-600 text-white text-[16px] text-center cursor-pointer w-[150px] h-13 p-1 mb-8">{show ? ('Close') : ('View Itineraries ↓')} </div>
-             
-      </div>
+         </div>
      </div>
 
      <div>
@@ -65,7 +64,7 @@ export default function CityDetails() {
                 ) : (
                  <ItineraryNotFound />
                 ))}
-            </div>
+      </div>
 
 
 

@@ -27,7 +27,8 @@ const user_reducer = createReducer(
             let new_state = {
                 ...state,
                 user: action.payload.user,
-                token: action.payload.token
+                token: action.payload.token,
+                messages: action.payload.messages
             }
             return new_state
         }
